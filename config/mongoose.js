@@ -1,8 +1,10 @@
+const dotenv = require("dotenv");
+dotenv.config();
 // Creating a database to store products
 const mongoose = require("mongoose");
 
 // Connecting the database
-mongoose.connect("mongodb://127.0.0.1:27017/EcommerceAPI");
+mongoose.connect(process.env.DATABASE_URL);
 
 const db = mongoose.connection;
 

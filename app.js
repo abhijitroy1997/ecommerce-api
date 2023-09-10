@@ -1,4 +1,5 @@
 // Imported libraries
+require("dotenv").config();
 const express = require("express");
 const db = require("./config/mongoose");
 
@@ -11,7 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 
 //Routes
 app.use("/", require("./routes/api/index"));
-
 app.listen(port, () => {
   console.log(`API Server is Live on http://localhost:${port}/products`);
 });
